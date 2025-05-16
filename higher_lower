@@ -1,5 +1,3 @@
-# this is part of code in place's week 4 section: the higher lower problem
-
 import random
 
 def main():
@@ -7,6 +5,7 @@ def main():
     score = 0
     for i in range(1, round_num + 1):
         score = higher_lower(score, i,round_num)
+    print("Your final score is",score)
     
 
 def higher_lower(score, i,round_num):
@@ -47,11 +46,14 @@ def higher_lower(score, i,round_num):
     print("                      ")
     if i < round_num:
         print("----- END OF ROUND",i," -----")
+        print("                      ")
+        print("----- WELCOME TO ROUND ",i+1," -----")
+        print("                      ")
     else:
         if i == round_num:
             print("----- END OF FINAL ROUND -----")
+            print("                      ")
             print("Thank you for playing!")
-    print("                      ")
     return score
 
 if __name__ == "__main__":
